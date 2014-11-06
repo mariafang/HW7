@@ -18,12 +18,19 @@
     <div id="container">
      
         <div id="header">
-            <p>
+
+            <div>
                 <h1>Countries in the World</h1>
                 
                 <h2>Know more about different countries</h2>
-               
-            </p> 
+            </div>
+
+            <div>
+                <asp:Image ID="img_clock" runat="server" ImageUrl="~/Images/clock.jpg" style="height:30px; width:30px;"/>
+                &nbsp;Today&#39;s Date:
+                <asp:Label ID="lbl_time" runat="server"></asp:Label>
+            </div>
+           
          
             <br />
 
@@ -48,6 +55,9 @@
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
         </asp:ContentPlaceHolder>
         </div>
+
+        <br />
+        <br />
 
         <div id="footer">
            © 2014 6K:183 Software Design & Development 
