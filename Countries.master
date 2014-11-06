@@ -1,0 +1,59 @@
+﻿<%@ Master Language="VB" CodeFile="Countries.master.vb" Inherits="Countries" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    
+    <link rel="stylesheet" type="text/css" href="./CSS/Style.css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div id="container">
+     
+        <div id="header">
+            <p>
+                <h1>Countries in the World</h1>
+                
+                <h2>Know more about different countries</h2>
+               
+            </p> 
+         
+            <br />
+
+        </div>
+
+        <div id="Nav">
+
+            <asp:HyperLink ID="hl_Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="hl_ViewAllCountries" runat="server" NavigateUrl="~/ViewAllCountries.aspx">View All Countries</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="h1_Search" runat="server" NavigateUrl="~/Search.aspx">Search</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="hl_aboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About us</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="hl_Contact" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+
+        </div>
+
+        <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+        </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer">
+           © 2014 6K:183 Software Design & Development 
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
