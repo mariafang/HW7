@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Countries.master" AutoEventWireup="false" CodeFile="CountryDetails.aspx.vb" Inherits="CountryDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    Countries in the World - Country Details
+    <title>Countries in the World - Country Details</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/Style.css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

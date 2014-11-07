@@ -3,14 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>
+<head runat="server">    
         <asp:ContentPlaceHolder id="head" runat="server">
-        </asp:ContentPlaceHolder>
-    </title>
-    
-    <link rel="stylesheet" type="text/css" href="./CSS/Style.css" />
-
+        </asp:ContentPlaceHolder>   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -51,7 +46,9 @@
             &nbsp;&nbsp;|&nbsp;
             <asp:HyperLink ID="hl_Contact" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
             &nbsp;&nbsp;|&nbsp;
-            <asp:HyperLink ID="hl_Login" runat="server" NavigateUrl="~/ContactUs.aspx">Login</asp:HyperLink>
+            <asp:HyperLink ID="h1_Admin" runat="server" NavigateUrl="~/Admin/AdminHome.aspx">Admin</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:LoginStatus ID="LoginStatus1" runat="server" />
 
         </div>
 

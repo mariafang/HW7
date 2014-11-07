@@ -22,5 +22,7 @@ Partial Class Search
 
         GridView1.Visible = False
 
+        tb_search.Focus()
+
     End Sub
 End Class

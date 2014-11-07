@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Countries.master" AutoEventWireup="false" CodeFile="NewCountry.aspx.vb" Inherits="Admin_NewCountry" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Countries.master" AutoEventWireup="false" CodeFile="CountryDetails.aspx.vb" Inherits="CountryDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <title>Countries in the World - Add New Country</title>
+    <title>Countries in the World - Country Details</title>
     <link rel="stylesheet" type="text/css" href="../CSS/Admin_Style.css" />
 </asp:Content>
 
@@ -31,23 +31,19 @@
     </asp:SqlDataSource>
 
     <br />
-
-    <span id="lightcolor"><asp:Label ID="lbl_Inserted" runat="server" Font-Underline="False"></asp:Label></span>
-
+    <span id="Notes"><asp:Label ID="lbl_deleted" runat="server"></asp:Label></span>
     <br />
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="CountryID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="CountryID" DataSourceID="SqlDataSource1">
         <EditItemTemplate>
-        </EditItemTemplate>
-        <InsertItemTemplate>
 
-                   <table>
+                 <table>
                         <tr>
                             <td id="tb_left">
                                 Country Name:
                             </td>
-                            <td id="tb_right">                       
-                                <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />                           
+                            <td id="tb_right">
+                                <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />
                             </td>
                             <td id="rfv">
                                 <asp:RequiredFieldValidator ID="rfv_CountryName" runat="server" ErrorMessage="Please enter the country's name!" ControlToValidate="CountryNameTextBox"></asp:RequiredFieldValidator>
@@ -62,7 +58,7 @@
                                 <asp:TextBox ID="IndependDateTextBox" runat="server" Text='<%# Bind("IndependDate") %>' />
                             </td>
                             <td id="rfv">
-                                <asp:RequiredFieldValidator ID="rfv_indenpDate" runat="server" ErrorMessage="Please enter the country's independence date!" ControlToValidate="IndependDateTextBox"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfv_IndependDate" runat="server" ErrorMessage="Please enter the country's independence date!" ControlToValidate="IndependDateTextBox"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
 
@@ -104,22 +100,94 @@
                                 <asp:TextBox ID="OfficialLanguagesTextBox" runat="server" Text='<%# Bind("OfficialLanguages") %>' />
                             </td>
                         </tr>
-                      
-                        <tr id="tb_bottom" style="text-align:left">
-                            <td>
-                                
+
+                        <tr id="tb_bottom">
+                            <td style="text-align:right">
+                                <asp:Button ID="btn_Save" runat="server" CausesValidation="True" CommandName="Update" Text="Save" />
                             </td>
                             <td>
-                                <asp:Button ID="btn_Insert" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" />
+                                <asp:Button ID="btn_Cancel" runat="server" CausesValidation="false" CommandName="Cancel" Text="Cancel" />
                             </td>
                         </tr>
 
                     </table>
-
+          
+        </EditItemTemplate>
+        <InsertItemTemplate>
+           
         </InsertItemTemplate>
         <ItemTemplate>
+            
+                <table>
+                        <tr>
+                            <td id="tb_left">
+                                Country Name:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="CountryNameLabel" runat="server" Text='<%# Bind("CountryName") %>' />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="tb_left">
+                                Independence Date:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="IndependDateLabel" runat="server" Text='<%# Bind("IndependDate") %>' />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="tb_left">
+                                Capital City:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="CapitalCityLabel" runat="server" Text='<%# Bind("CapitalCity") %>' />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="tb_left">
+                                National Flower:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="NationalFlowerLabel" runat="server" Text='<%# Bind("NationalFlower") %>' />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="tb_left">
+                                National Song:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="NationalSongLabel" runat="server" Text='<%# Bind("NationalSong") %>' />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="tb_left">
+                                Official Language:
+                            </td>
+                            <td id="tb_right">
+                                <asp:Label ID="OfficialLanguagesLabel" runat="server" Text='<%# Bind("OfficialLanguages") %>' />
+                            </td>
+                        </tr>
+
+                        <tr id="tb_bottom">
+                            <td>
+                                <asp:Button ID="btn_Edit" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                            </td>
+                            <td>
+                                <asp:Button ID="btn_Delete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+                            </td>
+                        </tr>
+
+                    </table>
+           
         </ItemTemplate>
     </asp:FormView>
 
-</asp:Content>
+    <br />
+
+    </asp:Content>
 

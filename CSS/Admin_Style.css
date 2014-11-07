@@ -1,0 +1,122 @@
+﻿body { 
+    text-align: center; 
+    color: black; 
+    background-color: #084B8A; 
+}
+
+
+h1{
+    font-size:24pt;
+    font-weight:bold;
+}
+
+
+h2{
+    font-size:14pt;
+}
+
+
+table{
+    align-self:center;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:collapse;
+}
+
+
+a { text-decoration:none; font-weight: bold; }
+a:link, a:visited { color:#F6D8CE; }
+
+
+#header{
+    background-color:#D0A9F5;
+    padding:10px;
+}
+
+
+#Nav{
+    background-color:#088A85;
+    padding:10px;
+}
+
+
+#Main{
+    color:#F6D8CE;
+    margin-left: auto;
+    margin-right: auto;
+    width:700px;
+    text-align:left;
+}
+
+
+#footer {
+    color:white;
+    position:absolute;
+    bottom:50px;
+    width:100%;
+    
+}
+
+
+#rfv{
+    color:red;
+    text-align:left;
+    padding:10px;
+}
+
+
+#tb_left{
+    color:#F6D8CE;
+    background-color:#088A85;
+    text-align:right;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+#tb_right{
+    color:#F6D8CE;
+    background-color:#58ACFA;
+    text-align:left;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+#tb_bottom{
+    color:#ffffff;
+    background-color:#088A85;
+    text-align:center;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+
+#lightcolor{
+    color:#F6D8CE;
+}
+
+
+.cssgridview{
+    margin-left: auto;
+    margin-right: auto;
+    border:solid 1px #ffffff;
+    border-collapse:collapse;
+    text-align:center;
+    color:#ffffff;
+}
+
+
+.cssgridview td{
+    padding:10px;
+    border:solid 1px #ffffff;
+    background-color:#58ACFA;
+}
+
+
+.cssgridview th{
+    padding:10px;
+    color:#F6D8CE;
+    background-color:#088A85;
+    border-left:solid 1px #ffffff;
+    font-size:0.9em;
+}
