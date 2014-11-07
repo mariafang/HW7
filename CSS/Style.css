@@ -16,6 +16,15 @@ h2{
 }
 
 
+table{
+    align-self:center;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:collapse;
+}
+
+
 a { text-decoration:none; font-weight: bold; }
 a:link, a:visited { color:#F6D8CE; }
 
@@ -33,10 +42,10 @@ a:link, a:visited { color:#F6D8CE; }
 
 
 #Main{
-    background-color:gray;
+    color:#F6D8CE;
     margin-left: auto;
     margin-right: auto;
-    width:500px;
+    width:700px;
     text-align:left;
 }
 
@@ -44,13 +53,50 @@ a:link, a:visited { color:#F6D8CE; }
 #footer {
     color:white;
     position:absolute;
-    
+    bottom:50px;
     width:100%;
     
 }
 
+
+#rfv{
+    color:red;
+    text-align:left;
+    padding:10px;
+}
+
+
+#tb_left{
+    color:#F6D8CE;
+    background-color:#088A85;
+    text-align:right;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+#tb_right{
+    color:#F6D8CE;
+    background-color:#58ACFA;
+    text-align:left;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+#tb_bottom{
+    color:#ffffff;
+    background-color:#088A85;
+    text-align:center;
+    padding:10px;
+    border:solid 1px #ffffff;
+}
+
+
+#lightcolor{
+    color:#F6D8CE;
+}
+
+
 .cssgridview{
-    width:auto;
     margin-left: auto;
     margin-right: auto;
     border:solid 1px #ffffff;
@@ -59,11 +105,13 @@ a:link, a:visited { color:#F6D8CE; }
     color:#ffffff;
 }
 
+
 .cssgridview td{
     padding:10px;
     border:solid 1px #ffffff;
     background-color:#58ACFA;
 }
+
 
 .cssgridview th{
     padding:10px;

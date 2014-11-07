@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
 
-    <div id="container">
+    <div>
      
         <div id="header">
 
@@ -28,6 +28,9 @@
             <div>
                 <asp:Image ID="img_clock" runat="server" ImageUrl="~/Images/clock.jpg" style="height:30px; width:30px;"/>
                 &nbsp;Today&#39;s Date:
+                <asp:Label ID="lbl_date" runat="server"></asp:Label>
+                <br />
+                Time now:
                 <asp:Label ID="lbl_time" runat="server"></asp:Label>
             </div>
            
@@ -39,15 +42,16 @@
         <div id="Nav">
 
             <asp:HyperLink ID="hl_Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
-
             &nbsp;&nbsp;|&nbsp;
             <asp:HyperLink ID="hl_ViewAllCountries" runat="server" NavigateUrl="~/ViewAllCountries.aspx">View All Countries</asp:HyperLink>
             &nbsp;&nbsp;|&nbsp;
             <asp:HyperLink ID="h1_Search" runat="server" NavigateUrl="~/Search.aspx">Search</asp:HyperLink>
             &nbsp;&nbsp;|&nbsp;
-            <asp:HyperLink ID="hl_aboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About us</asp:HyperLink>
+            <asp:HyperLink ID="hl_aboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
             &nbsp;&nbsp;|&nbsp;
-            <asp:HyperLink ID="hl_Contact" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+            <asp:HyperLink ID="hl_Contact" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="hl_Login" runat="server" NavigateUrl="~/ContactUs.aspx">Login</asp:HyperLink>
 
         </div>
 
