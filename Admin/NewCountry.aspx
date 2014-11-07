@@ -124,7 +124,7 @@
     <br />
     <br />
 
-    <asp:HyperLink runat="server" ID="hl_Back" NavigateUrl="~/Admin/AdminHome.aspx">Back to Amin Home</asp:HyperLink>
+    <asp:HyperLink runat="server" ID="hl_Back" NavigateUrl="~/Admin/AdminHome.aspx">Back to Admin Home</asp:HyperLink>
 
 </asp:Content>
 
