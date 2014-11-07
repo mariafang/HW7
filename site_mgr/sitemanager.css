@@ -1,4 +1,16 @@
-﻿body {
+﻿body { 
+    text-align: left; 
+    color: white; 
+    background-color: #084B8A; 
 }
+
+
+
+h1{
+    font-size:18pt;
+}
+
+
+
 
 .label_format{ color:red; font-style:italic; }

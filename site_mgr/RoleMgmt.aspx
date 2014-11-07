@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ASP.NET Role Based Security - Role Manager</title>
-    <link rel="stylesheet" type="text/css" href="~/sitemanager.css" />
+    <link rel="stylesheet" type="text/css" href="./sitemanager.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,7 +15,7 @@
 
             <br /><br /><hr />
             
-                <h3>Manage Roles:</h3>
+                <h1>Manage Roles:</h1>
 
                 Current Roles:<br />
                 <asp:ListBox ID="list_currentRoles" runat="server"></asp:ListBox>
@@ -44,7 +44,7 @@
             <br /><br /><hr />
             
             
-                <h3>Add A User To A Role:</h3>
+                <h1>Add A User To A Role:</h1>
 
                 <table>
                     <tr>
@@ -75,7 +75,7 @@
 
             <br /><br /><hr />
             
-                <h3>Remove A Role From A User</h3>
+                <h1>Remove A Role From A User</h1>
 
                 <asp:ListBox ID="list_allUsers" runat="server" AutoPostBack="True"></asp:ListBox>
 
@@ -93,7 +93,7 @@
                 <hr />
 
 
-                <h3>Remove A User From A Role</h3>
+                <h1>Remove A User From A Role</h1>
 
                 <asp:ListBox ID="list_allRoles" runat="server" AutoPostBack="True"></asp:ListBox>
 

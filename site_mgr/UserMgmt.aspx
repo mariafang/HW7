@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ASP.NET Role Based Security - User Manager</title>
-    <link rel="stylesheet" type="text/css" href="~/sitemanager.css" />
+    <link rel="stylesheet" type="text/css" href="./sitemanager.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         <asp:HyperLink ID="link_roleManager" runat="server" NavigateUrl="~/site_mgr/RoleMgmt.aspx">Role Manager</asp:HyperLink>
-        <h3>Create A New User:</h3>
+        <h1>Create A New User:</h1>
         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server">
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
@@ -100,7 +100,7 @@
         <br />
         <br />
         <hr />
-        <h3>Delete An Existing User</h3>
+        <h1>Delete An Existing User</h1>
         <p>
 
             <asp:ListBox ID="list_allUsers" runat="server"></asp:ListBox>
