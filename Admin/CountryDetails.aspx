@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" SelectCommand="SELECT * FROM [fang_HW7]" DeleteCommand="DELETE FROM [fang_HW7] WHERE [CountryID] = @CountryID" InsertCommand="INSERT INTO [fang_HW7] ([CountryName], [IndependDate], [CapitalCity], [NationalFlower], [NationalSong], [OfficialLanguages]) VALUES (@CountryName, @IndependDate, @CapitalCity, @NationalFlower, @NationalSong, @OfficialLanguages)" UpdateCommand="UPDATE [fang_HW7] SET [CountryName] = @CountryName, [IndependDate] = @IndependDate, [CapitalCity] = @CapitalCity, [NationalFlower] = @NationalFlower, [NationalSong] = @NationalSong, [OfficialLanguages] = @OfficialLanguages WHERE [CountryID] = @CountryID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" SelectCommand="SELECT * FROM [fang_HW7] WHERE ([CountryID] = @CountryID)" DeleteCommand="DELETE FROM [fang_HW7] WHERE [CountryID] = @CountryID" InsertCommand="INSERT INTO [fang_HW7] ([CountryName], [IndependDate], [CapitalCity], [NationalFlower], [NationalSong], [OfficialLanguages]) VALUES (@CountryName, @IndependDate, @CapitalCity, @NationalFlower, @NationalSong, @OfficialLanguages)" UpdateCommand="UPDATE [fang_HW7] SET [CountryName] = @CountryName, [IndependDate] = @IndependDate, [CapitalCity] = @CapitalCity, [NationalFlower] = @NationalFlower, [NationalSong] = @NationalSong, [OfficialLanguages] = @OfficialLanguages WHERE [CountryID] = @CountryID">
         <DeleteParameters>
             <asp:Parameter Name="CountryID" Type="Int32" />
         </DeleteParameters>
@@ -19,6 +19,9 @@
             <asp:Parameter Name="NationalSong" Type="String" />
             <asp:Parameter Name="OfficialLanguages" Type="String" />
         </InsertParameters>
+        <SelectParameters>
+            <asp:QueryStringParameter Name="CountryID" QueryStringField="CountryID" Type="Int32" />
+        </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="CountryName" Type="String" />
             <asp:Parameter Name="IndependDate" Type="String" />
@@ -30,8 +33,9 @@
         </UpdateParameters>
     </asp:SqlDataSource>
 
+    <span id="lightcolor"><asp:Label ID="lbl_deleted" runat="server"></asp:Label></span>
     <br />
-    <span id="Notes"><asp:Label ID="lbl_deleted" runat="server"></asp:Label></span>
+    <span id="lightcolor"><span id="star">*</span> indicates required fields</span>
     <br />
 
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="CountryID" DataSourceID="SqlDataSource1">
@@ -40,7 +44,7 @@
                  <table>
                         <tr>
                             <td id="tb_left">
-                                Country Name:
+                                Country Name: <span id="star">*</span>
                             </td>
                             <td id="tb_right">
                                 <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />
@@ -52,7 +56,7 @@
 
                         <tr>
                             <td id="tb_left">
-                                Independence Date:
+                                Independence Date: <span id="star">*</span>
                             </td>
                             <td id="tb_right">
                                 <asp:TextBox ID="IndependDateTextBox" runat="server" Text='<%# Bind("IndependDate") %>' />
@@ -64,7 +68,7 @@
 
                         <tr>
                             <td id="tb_left">
-                                Capital City:
+                                Capital City: <span id="star">*</span>
                             </td>
                             <td id="tb_right">
                                 <asp:TextBox ID="CapitalCityTextBox" runat="server" Text='<%# Bind("CapitalCity") %>' />

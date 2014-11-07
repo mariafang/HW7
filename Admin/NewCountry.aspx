@@ -30,10 +30,10 @@
         </UpdateParameters>
     </asp:SqlDataSource>
 
-    <br />
-
+    
     <span id="lightcolor"><asp:Label ID="lbl_Inserted" runat="server" Font-Underline="False"></asp:Label></span>
-
+    <br />
+    <span id="lightcolor"><span id="star">*</span> indicates required fields</span>
     <br />
 
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="CountryID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
@@ -44,7 +44,7 @@
                    <table>
                         <tr>
                             <td id="tb_left">
-                                Country Name:
+                                Country Name: <span id="star">*</span>
                             </td>
                             <td id="tb_right">                       
                                 <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />                           
@@ -56,7 +56,7 @@
 
                         <tr>
                             <td id="tb_left">
-                                Independence Date:
+                                Independence Date: <span id="star">*</span>
                             </td>
                             <td id="tb_right">
                                 <asp:TextBox ID="IndependDateTextBox" runat="server" Text='<%# Bind("IndependDate") %>' />
@@ -68,7 +68,7 @@
 
                         <tr>
                             <td id="tb_left">
-                                Capital City:
+                                Capital City: <span id="star">*</span>
                             </td>
                             <td id="tb_right">
                                 <asp:TextBox ID="CapitalCityTextBox" runat="server" Text='<%# Bind("CapitalCity") %>' />

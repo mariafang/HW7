@@ -11,7 +11,7 @@ Partial Class CountryDetails
     Protected Sub FormView1_ItemDeleted(sender As Object, e As FormViewDeletedEventArgs) Handles FormView1.ItemDeleted
 
         Dim deletedCountry As String = e.Values("CountryName").ToString()
-        lbl_deleted.Text = deletedCountry & "has been deleted from the database"
+        lbl_deleted.Text = deletedCountry & " has been deleted from the database"
         Response.AddHeader("REFRESH", "2;URL=./AdminHome.aspx")
 
     End Sub

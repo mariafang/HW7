@@ -11,7 +11,7 @@
     <br />
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" SelectCommand="SELECT * FROM [fang_HW7]"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="cssgridview" DataKeyNames="CountryID">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="cssgridview" DataKeyNames="CountryID" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="CountryName" HeaderText="Country Name" SortExpression="CountryName" />
             <asp:BoundField DataField="IndependDate" HeaderText="Independence Date" SortExpression="IndependDate" />

@@ -11,7 +11,7 @@ Partial Class Admin_NewCountry
     Protected Sub FormView1_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles FormView1.ItemInserted
 
         Dim InsertedCountry As String = e.Values("CountryName").ToString()
-        lbl_Inserted.Text = InsertedCountry & "has been added to the database"
+        lbl_Inserted.Text = InsertedCountry & " has been added to the database"
         Response.AddHeader("REFRESH", "2;URL=./AdminHome.aspx")
 
     End Sub
