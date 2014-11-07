@@ -10,7 +10,13 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
+        <div style="text-align:left">
         <asp:HyperLink ID="link_roleManager" runat="server" NavigateUrl="~/site_mgr/RoleMgmt.aspx">Role Manager</asp:HyperLink>
+        &nbsp;&nbsp;|&nbsp;
+        <asp:HyperLink ID="h1_Back" runat="server" NavigateUrl="~/Admin/AdminHome.aspx">Admin Home</asp:HyperLink>
+        </div>
+
         <h1>Create A New User:</h1>
         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server">
             <WizardSteps>

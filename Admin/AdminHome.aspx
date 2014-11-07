@@ -9,15 +9,15 @@
 
     <br />
     
-    <asp:HyperLink ID="hl_AdminHome" runat="server" NavigateUrl="~/Admin/AdminHome.aspx">Admin Home</asp:HyperLink>
+    <asp:HyperLink ID="hl_AdminHome" runat="server" NavigateUrl="~/Admin/AdminHome.aspx" style="color:white">Admin Home</asp:HyperLink>
     &nbsp;&nbsp;|&nbsp;
-    <asp:HyperLink ID="hl_EditCountries" runat="server" NavigateUrl="~/Admin/ViewAllCountries.aspx">Edit Countries</asp:HyperLink>
+    <asp:HyperLink ID="hl_EditCountries" runat="server" NavigateUrl="~/Admin/ViewAllCountries.aspx" style="color:white">Edit Countries</asp:HyperLink>
     &nbsp;&nbsp;|&nbsp;
-    <asp:HyperLink ID="h1_InsertNew" runat="server" NavigateUrl="~/Admin/NewCountry.aspx">Insert a New Country</asp:HyperLink>
+    <asp:HyperLink ID="h1_InsertNew" runat="server" NavigateUrl="~/Admin/NewCountry.aspx" style="color:white">Insert a New Country</asp:HyperLink>
     &nbsp;&nbsp;|&nbsp;
-    <asp:HyperLink ID="hl_ManageUser" runat="server" NavigateUrl="~/site_mgr/UserMgmt.aspx">Manage Users</asp:HyperLink>
+    <asp:HyperLink ID="hl_ManageUser" runat="server" NavigateUrl="~/site_mgr/UserMgmt.aspx" style="color:white">Manage Users</asp:HyperLink>
     &nbsp;&nbsp;|&nbsp;
-    <asp:HyperLink ID="hl_ManageRoles" runat="server" NavigateUrl="~/site_mgr/RoleMgmt.aspx">Manage Roles</asp:HyperLink>
+    <asp:HyperLink ID="hl_ManageRoles" runat="server" NavigateUrl="~/site_mgr/RoleMgmt.aspx" style="color:white">Manage Roles</asp:HyperLink>
 
     <br />
 

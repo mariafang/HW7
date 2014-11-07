@@ -9,10 +9,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div navigateurl="../Admin/AdminHome.aspx">
+            <div style="text-align:left">
 
             <asp:HyperLink ID="link_userManager" runat="server" NavigateUrl="~/site_mgr/UserMgmt.aspx">User Manager</asp:HyperLink>
+            &nbsp;&nbsp;|&nbsp;
+            <asp:HyperLink ID="h1_Back" runat="server" NavigateUrl="~/Admin/AdminHome.aspx">Admin Home</asp:HyperLink>
 
+            </div>
+            
             <br /><br /><hr />
             
                 <h1>Manage Roles:</h1>

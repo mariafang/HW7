@@ -121,5 +121,10 @@
         </ItemTemplate>
     </asp:FormView>
 
+    <br />
+    <br />
+
+    <asp:HyperLink runat="server" ID="hl_Back" NavigateUrl="~/Admin/AdminHome.aspx">Back to Amin Home</asp:HyperLink>
+
 </asp:Content>
 
